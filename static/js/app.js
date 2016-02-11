@@ -32,7 +32,7 @@ angular.module('alessio', [
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
-    ngFB.init({appId: '932536800093017'});
+    ngFB.init({appId: '1223587537669382'});
   });
 })
 
