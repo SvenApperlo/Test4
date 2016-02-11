@@ -39,17 +39,16 @@ angular.module('alessio.controllers', ['ngOpenFB'])
 .controller('WelcomeCtrl', function($scope, $ionicModal, $state , $timeout, ngFB){
 	$scope.bgs = ["http://lorempixel.com/640/1136", "https://dl.dropboxusercontent.com/u/30873364/envato/ionFB/ion-fb-feed.gif"];
 	$scope.fbLogin = function () {
-		 ngFB.login({scope: 'email'}).then(
-		 	function (response) {
-		 		if(response.status === 'connected') {
-		 			//console.log('Facebook login succeeded');
-		 			//$scope.closeLogin();
-		 			alert('Facebook login succeeded');
-		 			$state.go('app.home');
-		 		} else {
-		 			alert('Facebook login failed');
-		 		}
-		 	});
+		 openFB.login(
+                function (response) {
+                    if (response.status === 'connected') {
+                        console.log('Facebook login succeeded');
+                        $scope.closeLogin();
+                    } else {
+                        alert('Facebook login failed');
+                    }
+                },
+                {scope: 'email,publish_actions'});
 	};
 	$scope.facebookSignIn = function(){
 		console.log("doing facebbok sign in");
