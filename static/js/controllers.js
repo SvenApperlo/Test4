@@ -48,7 +48,7 @@ angular.module('alessio.controllers', ['ngOpenFB'])
                         alert('Facebook login failed');
                     }
                 },
-                {scope: 'email,publish_actions'});
+                {scope: 'email'});
 	};
 	$scope.facebookSignIn = function(){
 		console.log("doing facebbok sign in");
