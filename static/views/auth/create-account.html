@@ -23,39 +23,42 @@
       <hr class="separator-line"/>
     </div>
   -->
-    <div class="row form-wrapper">
+    <div class="row">
       <div class="col">
-        <form name="signup_form" class="" novalidate>
-          <div class="form-fields-outer list list-inset">
-            <div class="row multi-inputs">
-              <div class="col">
-                <label class="item item-input">
-                  <input class="multi-input" type="text" placeholder="Johan" name="name" ng-model="user.name" required>
-                </label>
-              </div>
-              <div class="col">
-                <label class="item item-input">
-                  <input class="multi-input" type="text" placeholder="Smit" name="surename" ng-model="user.surename" required>
-                </label>
-              </div>
+        <form name="userForm" class="" ng-submit="doSignUp()" novalidate>
+            <!--Name-->
+            <div class="form-group" ng-class="{'has-error' : userForm.name.$invalid && !userForm.name.$pristine}">
+              <input class="form-control" type="text" placeholder="Name" name="name" ng-model="user.name" required>
+              <p ng-show="userForm.name.$invalid && !userForm.name.$pristine"  class="help-block">Your name is required.</p>
             </div>
-            <label class="item item-input">
-              <input type="text" placeholder="johan_smit" name="username" ng-model="user.username" required>
-            </label>
-            <label class="item item-input">
-              <input type="text" placeholder="example@demo.com" name="email" ng-model="user.email" required>
-            </label>
-            <label class="item item-input">
-              <input type="date" placeholder="Date of Birth" name="birthday" ng-model="user.birthday" required>
-            </label>
-            <label class="item item-input" show-hide-container>
-              <input type="password" placeholder="Password" name="password" ng-model="user.password" required show-hide-input>
-            </label>
-            <button type="submit" class="sign-up button button-block" ng-click="doSignUp()">
+            <!--Surename-->
+            <div class="form-group" ng-class="{'has-error' : userForm.surename.$invalid && !userForm.surename.$pristine}">
+              <input class="form-control" type="text" placeholder="Surename" name="surename" ng-model="user.surename" required>
+              <p ng-show="userForm.surename.$invalid && !userForm.surename.$pristine"  class="help-block">Your Surename is required.</p>
+            </div>
+            <!--User Name-->
+            <div class="form-group" ng-class="{'has-error' : userForm.username.$invalid && !userForm.username.$pristine}">
+              <input class="form-control" type="text" placeholder="User Name" name="username" ng-model="user.username" required>
+              <p ng-show="userForm.username.$invalid && !userForm.username.$pristine"  class="help-block">Your User Name is required.</p>
+            </div>
+            <!--Email-->
+            <div class="form-group" ng-class="{'has-error' : userForm.email.$invalid && !userForm.email.$pristine}">
+              <input class="form-control" type="email" placeholder="example@demo.com" name="email" ng-model="user.email" required>
+              <p ng-show="userForm.email.$invalid && !userForm.email.$pristine"  class="help-block">Enter a valid email.</p>
+            </div>
+            <!--date of birth-->
+            <div class="form-group">
+              <input class="form-control" type="date" placeholder="Date of Birth" name="birthday" ng-model="user.birthday">
+            </div>
+            <!--password-->
+            <div class="form-group">
+              <input class="form-control" type="password" placeholder="Password" name="password" ng-model="user.password" required>
+              <p ng-show="userForm.password.$invalid && !userForm.password.$pristine"  class="help-block">Enter a valid password.</p>
+            </div>
+            <!--submit button-->
+            <button class="signup-button" type="submit" ng-disabled="userForm.$invalid">
               Sign Up
             </button>
-            <p ng-show="error" class="message error">{{error}}</p>
-          </div>
         </form>
       </div>
     </div>

@@ -89,6 +89,7 @@ angular.module('alessio.controllers', ['ngOpenFB'])
 	}
 
 	function addUser () {
+		alert($scope.user.surename);
 		alessioService.addUser($scope.user)
 		.then(function(result) {
 			$scope.user= {};
@@ -106,20 +107,21 @@ angular.module('alessio.controllers', ['ngOpenFB'])
 	getAllUsers();
 
 	$scope.doSignUp = function(){
-		/*
-		alert($scope.user.name);
-		alert($scope.user.surename);
 		alert($scope.user.username);
-		alert($scope.user.email);
-		*/
-		if ($scope.user.name !="" && $scope.user.surename != "" && $scope.user.username != "" && $scope.user.email != "") {
-			//alert($scope.user.surename);
-			addUser();
-			console.log("doing sign up");
-			$state.go('app.home');
-		} else{
-			alert("Correct your user informati");
-		};
+		alessioService.getUsers()
+		.then(function (result) {
+			$scope.users = result.data.data;
+			var x;
+			for(x in $scope.users) {
+				if ($scope.users[x].username == $scope.user.username) {
+					alert('This account already exist! Please re-enter another account.');
+					break;
+				} else if (x == $scope.users.length-1) {
+					addUser();
+					$state.go('app.home');
+				};
+			}
+		});
 	};
 })
 
