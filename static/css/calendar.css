@@ -98,9 +98,10 @@ body {
 }
 
 .weeks span.active {
-	background: #f78536;
+	background: #fff;
 	border-radius: 50%;
-	border: solid 1px #014834;
+	border: solid 1px #349C7F;
+	color: #11C1F3;
 }
 
 .weeks span:not(.last-month):hover {
@@ -114,7 +115,7 @@ body {
 
 .event:after {
 	content: '•';
-	color: #f78536;
+	color: #FFFFFF;
 	font-size: 17px;
 	position: absolute;
 	right: 15px;

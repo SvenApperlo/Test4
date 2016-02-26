@@ -10,6 +10,10 @@
 p {
   font-family: 'open-sans-regular';
 }
+
+a.button .icon::before, a.button.icon::before, a.button.icon-left::before, a.button.icon-right::before {
+    margin-top: 10px;
+}
 .button {
   font-family: 'open-sans-regular';
 }
