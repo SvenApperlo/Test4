@@ -1,21 +1,113 @@
-.help-block {
-	color: rgba(255, 0, 0, 0.79);
-	font-size: 12px;
+/* Empty. Add your own CSS if you like */
+@font-face {
+  font-family: 'open-sans-light';
+  src: url('../font/OpenSans-Light.ttf');
 }
-
-.form-control {
+@font-face {
+  font-family: 'open-sans-regular';
+  src: url('../font/OpenSans-Regular.ttf');
+}
+p {
+  font-family: 'open-sans-regular';
+}
+.button {
+  font-family: 'open-sans-regular';
+}
+.home_back {
+	height: 100%;
+	width: 100%;
+}
+.top_space {
+  width:100%;
+  height:100px;
+}
+.home_title_div {
+  text-align: center;
+}
+.home_logo {
 	margin: auto;
-	margin-top: 8px;
-	padding-left: 8px !important;
-	width: 100%;
-	height: 34px;
-    border: 1px solid #CCC !important;
+  padding-top: 20px;
+  padding-bottom: 4px;
+}
+.submit_space {
+  width: 100%;
+  height: 100px;
+}
+.form_div {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.signup-button {
-	width: 100%;
-	height: 44px;
-	margin-top: 12px;
-	border: 1px solid #CCC !important;
-	background-color: rgba(5, 122, 72, 0.91);
+.main_title {
+  text-align: center;
+}
+.main_title h4 {
+  font-family: 'open-sans-regular';
+}
+.main_slide1 {
+  display: block;
+}
+.main_slide_left {
+  float: left;
+  width: 22%;
+  margin-top: 4px;
+  text-align: right;
+  background: RGBA(224, 222, 222, 0.79);
+  height: 62px;
+  padding-right: 10px;
+}
+.main_slide_right {
+  float: left;
+  width: 78%;
+}
+.main_slide_t1 {
+  line-height: 30px;
+  font-family: 'open-sans-regular';
+}
+.main_slide_t2 {
+  line-height: 30px;
+  font-family: 'open-sans-light';
+}
+.main_slide_lt1 {
+  line-height: 15px;
+  color: rgb(96, 96, 96);
+  font-family: 'open-sans-regular';
+}
+.main_slide_lt2 {
+  line-height: 15px;
+  color: rgb(96, 96, 96);
+  font-family: 'open-sans-light';
+}
+.main_slide_righta1 {
+  background: rgb(22, 152, 110) none repeat scroll 0% 0% !important;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+
+}
+.main_slide_righta2 {
+  background: rgb(68, 155, 210) none repeat scroll 0% 0% !important;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+
+}
+.main_slide_righta3 {
+  background: rgb(68, 155, 210) none repeat scroll 0% 0% !important;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+
+}
+.main_slide_righta4 {
+  background: rgb(22, 152, 110) none repeat scroll 0% 0% !important;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+
+}
+.main_slide_righta5 {
+  background: rgb(225, 102, 87) none repeat scroll 0% 0% !important;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+
+}
+.main_slide_right_content {
+  text-align: left;
 }
