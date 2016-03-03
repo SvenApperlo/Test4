@@ -7,16 +7,59 @@
   font-family: 'open-sans-regular';
   src: url('../font/OpenSans-Regular.ttf');
 }
+@font-face {
+  font-family: 'open-sans-semibold';
+  src: url('../font/OpenSans-Semibold.ttf');
+}
 p {
   font-family: 'open-sans-regular';
 }
-
+/* background style*/
+.green {
+  background: #009E3F;
+}
+.gray {
+  background: #EDEDED;
+}
+.blue {
+  background: #0892D2;
+}
+.red {
+  background: #F9553A;
+}
+.dark {
+  background-color: #29292a !important;
+  color: #ffffff;
+  border-width: 0px !important;
+}
+.black {
+  background-color: #202020 !important;
+  color: #ffffff;
+  border-width: 0px !important; 
+}
+/*--------------*/
 a.button .icon::before, a.button.icon::before, a.button.icon-left::before, a.button.icon-right::before {
     margin-top: 10px;
 }
-.button {
+.mytitle h1 {
+  font-family: 'open-sans-semibold';
+  color: #dfebed;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 7px;
+  margin-top: 10px;
+}
+.current-date h1 {
+  font-family: 'open-sans-semibold';
+  color: #dfebed;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 7px;
+}
+.button, .title {
   font-family: 'open-sans-regular';
 }
+/*home screen*/
 .home_back {
 	height: 100%;
 	width: 100%;
@@ -41,77 +84,82 @@ a.button .icon::before, a.button.icon::before, a.button.icon-left::before, a.but
   padding-left: 20px;
   padding-right: 20px;
 }
-
+/*main screen*/
 .main_title {
   text-align: center;
 }
 .main_title h4 {
   font-family: 'open-sans-regular';
 }
-.main_slide1 {
+.main-list {
+  width: 100%;
+}
+.main-item {
+  margin: 10px 0px 10px 0px;
+  padding: 0px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.14);
+  border:none;
+}
+.main-item-div {
+  height: 56px;
   display: block;
 }
-.main_slide_left {
+.main-item-left, .main-item-center, .main-item-right {
+  height: 100%;
   float: left;
-  width: 22%;
-  margin-top: 4px;
+}
+.main-item-left {
+  display: block;
+  width: 18%;
+}
+.main-item-center {
+  width: 2%;
+}
+.main-item-right {
+  width: 80%;
+}
+
+.menu-mark-text,
+.main-item-to,
+.main-item-detail{
+  font-family: 'open-sans-light';
+}
+.main-item-from,
+.main-item-to {
   text-align: right;
-  background: RGBA(224, 222, 222, 0.79);
-  height: 62px;
+  padding-right: 5px;
+  padding-top: 4px;
+}
+.item,
+.main-item-from ,
+.main-item-name{
+  font-family: 'open-sans-regular';
+}
+.main-item-name,
+.main-item-detail {
+  padding-left: 10px;
   padding-right: 10px;
+  padding-top: 4px;
 }
-.main_slide_right {
-  float: left;
-  width: 78%;
+
+.menu-mark {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: rgb(17, 193, 243);
+  border-radius: 50%;
+  top: 10px;
+  right: 60px;
 }
-.main_slide_t1 {
-  line-height: 30px;
-  font-family: 'open-sans-regular';
+.menu-mark-text {
+  color: #ffffff;
+  top: 8px;
+  left: 10px;
+  position: absolute;
 }
-.main_slide_t2 {
-  line-height: 30px;
+/*detail screen*/
+.detail1, .detail2, .detail3, .detail4,
+.detail5, .detail61, .detail62, .detail7,
+.detail8, .detail9{
   font-family: 'open-sans-light';
-}
-.main_slide_lt1 {
-  line-height: 15px;
-  color: rgb(96, 96, 96);
-  font-family: 'open-sans-regular';
-}
-.main_slide_lt2 {
-  line-height: 15px;
-  color: rgb(96, 96, 96);
-  font-family: 'open-sans-light';
-}
-.main_slide_righta1 {
-  background: rgb(22, 152, 110) none repeat scroll 0% 0% !important;
-  margin-top: 4px !important;
-  margin-bottom: 4px !important;
-
-}
-.main_slide_righta2 {
-  background: rgb(68, 155, 210) none repeat scroll 0% 0% !important;
-  margin-top: 4px !important;
-  margin-bottom: 4px !important;
-
-}
-.main_slide_righta3 {
-  background: rgb(68, 155, 210) none repeat scroll 0% 0% !important;
-  margin-top: 4px !important;
-  margin-bottom: 4px !important;
-
-}
-.main_slide_righta4 {
-  background: rgb(22, 152, 110) none repeat scroll 0% 0% !important;
-  margin-top: 4px !important;
-  margin-bottom: 4px !important;
-
-}
-.main_slide_righta5 {
-  background: rgb(225, 102, 87) none repeat scroll 0% 0% !important;
-  margin-top: 4px !important;
-  margin-bottom: 4px !important;
-
-}
-.main_slide_right_content {
-  text-align: left;
 }

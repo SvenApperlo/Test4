@@ -1,7 +1,7 @@
 angular.module('app.routes', [])
 
-.config(function($stateProvider, $urlRouterProvider) {
-
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+  $ionicConfigProvider.tabs.position('top');
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
@@ -26,9 +26,55 @@ angular.module('app.routes', [])
       views: {
         'menuContent': {
           templateUrl: 'templates/main.html',
-          controller:'MainCtrl'
+          controller:'ContentCtrl'
         }
       }
+    })
+
+    .state('main.citasPendient', {
+      url:'/citasPendient',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/citasPendient.html',
+          controller:'PendientCtrl'
+        }
+      }
+    })
+
+    .state('main.addappointment', {
+      url:'/addappointment',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/AddAppointment.html',
+          controller:'AddAppointmentCtrl'
+        }
+      }
+    })
+
+    .state('main.addappointment.newclient', {
+      url:'/newclient',
+      views: {
+        'addtab': {
+          templateUrl: 'templates/NewClient.html',
+          controller:'NewClientCtrl'
+        }
+      }
+    })
+
+    .state('main.addappointment.existclient', {
+      url:'/existclient',
+      views: {
+        'existtab': {
+          templateUrl: 'templates/ExistClient.html',
+          controller:'ExistClientCtrl'
+        }
+      }
+    })
+
+    .state('detail', {
+      url: '/detail',
+      templateUrl: 'templates/detail.html',
+      controller: 'DetailCtrl'
     })
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/home');

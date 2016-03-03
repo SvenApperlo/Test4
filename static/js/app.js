@@ -7,7 +7,14 @@ angular.module('app', ['ionic',
  'app.routes',
  'app.services',
  'app.home',
- 'app.main'])
+ 'app.main',
+ 'app.detail',
+ 'main.content',
+ 'main.pendient',
+ 'main.addappointment',
+ 'main.addappointment.newclient',
+ 'main.addappointment.existclient'
+ ])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
