@@ -1,0 +1,28 @@
+<ion-view title="Adjustment">
+  <ion-nav-bar class="bar-calm">
+    <ion-nav-buttons side="left">
+       <button class="button icon-left ion-android-arrow-back" ng-click="goBack()"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+       <button class="button">GUARDAR</button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-nav-title>
+    <div class="mytitle">
+      <h1>ajustes</h1>
+    </div>
+  </ion-nav-title>
+  <div class="tabs-striped tabs-top tabs-background-dark tabs-color-light">
+      <ion-tabs>
+          <ion-tab title="DATOS" href="#adjustment/adjustmentdata">
+              <ion-nav-view  name="datatab"></ion-nav-view>
+          </ion-tab>
+          <ion-tab title="FOTOS" href="#adjustment/adjustmentphoto">
+              <ion-nav-view name="phototab"></ion-nav-view>
+          </ion-tab>
+          <ion-tab title="HORARIOS" href="#adjustment/adjustmentschedule">
+              <ion-nav-view name="scheduletab"></ion-nav-view>
+          </ion-tab>
+      </ion-tabs>
+  </div>
+</ion-view>

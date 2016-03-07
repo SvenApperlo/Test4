@@ -12,4 +12,10 @@ angular.module('app.main', [])
 	$scope.goAddAppointment=function() {
 		$state.go('main.addappointment');	
 	}
+	$scope.goCustomers=function() {
+		$state.go('main.customers');	
+	}
+	$scope.goAdjustment=function() {
+		$state.go('adjustment');	
+	}
 })

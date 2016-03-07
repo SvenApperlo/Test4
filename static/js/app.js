@@ -9,12 +9,21 @@ angular.module('app', ['ionic',
  'app.home',
  'app.main',
  'app.detail',
+ 'app.adjustment',
+ 'app.adjustment.data',
+ 'app.adjustment.photo',
+ 'app.adjustment.schedule',
+ 'app.editcustomer',
+ 'app.editcustomer.data',
+ 'app.editcustomer.history',
  'main.content',
  'main.pendient',
  'main.addappointment',
  'main.addappointment.newclient',
- 'main.addappointment.existclient'
- ])
+ 'main.addappointment.existclient',
+ 'main.customers',
+ 'app.addcustomer'
+  ])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
