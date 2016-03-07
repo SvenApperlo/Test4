@@ -1,4 +1,4 @@
-angular.module('app.adjustment.schedule', [])
+angular.module('main.adjustment.schedule', [])
 
 .controller('AdjustmentScheduleCtrl', function($scope) {
 

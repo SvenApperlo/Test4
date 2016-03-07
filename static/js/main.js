@@ -16,6 +16,12 @@ angular.module('app.main', [])
 		$state.go('main.customers');	
 	}
 	$scope.goAdjustment=function() {
-		$state.go('adjustment');	
+		$state.go('main.adjustment');	
+	}
+	$scope.goNewAppointment=function() {
+		$state.go('main.addappointment');	
+	}
+	$scope.goDiary=function() {
+		$state.go('main.content');	
 	}
 })

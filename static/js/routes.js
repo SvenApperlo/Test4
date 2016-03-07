@@ -125,13 +125,17 @@ angular.module('app.routes', [])
 
 
     /**==Main -> Adjustment==**/
-    .state('adjustment', {
+    .state('main.adjustment', {
         url:'/adjustment',
-        templateUrl: 'templates/Adjustment.html',
-        controller: 'AdjustmentCtrl'
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/Adjustment.html',
+            controller: 'AdjustmentCtrl'    
+          }
+        }
     })
 
-    .state('adjustment.data', {
+    .state('main.adjustment.data', {
       url:'/adjustmentdata',
       views: {
         'datatab': {
@@ -141,7 +145,7 @@ angular.module('app.routes', [])
       }
     })
 
-    .state('adjustment.photo', {
+    .state('main.adjustment.photo', {
       url:'/adjustmentphoto',
       views: {
         'phototab': {
@@ -151,7 +155,7 @@ angular.module('app.routes', [])
       }
     })
 
-    .state('adjustment.schedule', {
+    .state('main.adjustment.schedule', {
       url:'/adjustmentschedule',
       views: {
         'scheduletab': {

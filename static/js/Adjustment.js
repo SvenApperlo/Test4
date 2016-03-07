@@ -1,4 +1,4 @@
-angular.module('app.adjustment', [])
+angular.module('main.adjustment', [])
 
 .controller('AdjustmentCtrl', function($scope, $ionicHistory) {
 	$scope.goBack=function() {

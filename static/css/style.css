@@ -92,8 +92,12 @@ a.button .icon::before, a.button.icon::before, a.button.icon-left::before, a.but
 .main_title {
   text-align: center;
 }
-.main_title h4 {
+.main_title-1{
   font-family: 'open-sans-regular';
+}
+
+.main_title-2{
+  font-family: 'open-sans-light';
 }
 .main-list {
   width: 100%;
@@ -101,7 +105,6 @@ a.button .icon::before, a.button.icon::before, a.button.icon-left::before, a.but
 .main-item {
   margin: 10px 0px 10px 0px;
   padding: 0px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.14);
   border:none;
 }
 .main-item-div {
@@ -128,13 +131,17 @@ a.button .icon::before, a.button.icon::before, a.button.icon-left::before, a.but
 .main-item-detail{
   font-family: 'open-sans-light';
 }
+.main-item-to {
+  font-size: 14px !important;
+  margin-top: 5px !important;
+}
 .main-item-from,
 .main-item-to {
   text-align: right;
   padding-right: 5px;
   padding-top: 4px;
 }
-.item, .item h2,
+.item,
 .main-item-from ,
 .main-item-name{
   font-family: 'open-sans-regular';
@@ -145,7 +152,14 @@ a.button .icon::before, a.button.icon::before, a.button.icon-left::before, a.but
   padding-right: 10px;
   padding-top: 4px;
 }
-
+.main-item-from,
+.main-item-to,
+.main-item-name,
+.main-item-detail,
+.main_title-1,
+.main_title-2 {
+  color: rgb(63, 63, 63);
+}
 .menu-mark {
   width: 30px;
   height: 30px;
